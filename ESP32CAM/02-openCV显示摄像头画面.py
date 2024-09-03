@@ -3,12 +3,11 @@ import network
 import camera
 import time
 
-
 # 连接wifi
 wlan = network.WLAN(network.STA_IF)
 wlan.active(True)
 if not wlan.isconnected():
-    print('connecting to network...')
+    print('连接到网络...')
     wlan.connect('HUAWEI-NZX_2.4G_Wi-Fi5', '987654321')
     
     while not wlan.isconnected():
